@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>新規作成</title>
+{% endblock %}
+
+{% block content %}
+    <h1>記録する</h1>
+    <form action="{{ url_for('register_article') }}" method="post">
+        <div><div style="display: inline;">人物</div>
+            <select name="user" id ="user">
+                <option></option>
+                <option>父</option>
+                <option>母</option>
+                <option>祖母</option>
+                <option>祖父</option>
+                <option>弟</option>
+                <option>妹</option>
+            </select>
+        </div>
+        <div>
+            <div>
+                <div>
+                    <div style="display: inline;">授乳</div>
+                    <select name="breastfeeding" id ="breastfeeding">
+                        <option></option>
+                        <option>〇</option>
+                    </select>
+                </div>
+                <div>
+                <div>
+                    <div style="display: inline;">尿</div>
+                    <select name="urine" id ="urine">
+                        <option></option>
+                        <option>〇</option>
+                    </select>
+                </div>
+                <div>
+                    <div style="display: inline;">便</div>
+                    <select name="flight" id ="flight">
+                        <option></option>
+                        <option>〇</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button>作成</button>
+    </form>
+{% endblock %}
