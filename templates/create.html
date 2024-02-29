@@ -5,45 +5,57 @@
 {% endblock %}
 
 {% block content %}
-    <h1>記録する</h1>
-    <form action="{{ url_for('register_article') }}" method="post">
-        <div><div style="display: inline;">人物</div>
-            <select name="user" id ="user">
-                <option></option>
-                <option>父</option>
-                <option>母</option>
-                <option>祖母</option>
-                <option>祖父</option>
-                <option>弟</option>
-                <option>妹</option>
-            </select>
+    <h1 class="heading-10">記録する</h1>
+    <form action="{{ url_for('register_article') }}" method="post" style="text-align: center;">
+        <div id="a0">
+            <label class="selectbox-2">
+                <select name="user" id="user">
+                    <option value="" disabled selected style="display:none;">人物
+                    <option></option>
+                    <option>父</option>
+                    <option>母</option>
+                    <option>祖母</option>
+                    <option>祖父</option>
+                    <option>弟</option>
+                    <option>妹</option>
+                </select>
+            </label>
         </div>
         <div>
-            <div>
-                <div>
-                    <div style="display: inline;">授乳</div>
-                    <select name="breastfeeding" id ="breastfeeding">
+            <div id="a1">
+                <label class="selectbox-2" >
+                    <select name="breastfeeding" id="breastfeeding">
+                        <option value="" disabled selected style="display:none;">授乳
                         <option></option>
                         <option>〇</option>
                     </select>
-                </div>
-                <div>
-                <div>
-                    <div style="display: inline;">尿</div>
-                    <select name="urine" id ="urine">
+                </label>
+            </div>
+            <div id="a2">
+                <label class="selectbox-2" >
+                    <select name="urine" id="urine">
+                        <option value="" disabled selected style="display:none;">尿
                         <option></option>
                         <option>〇</option>
                     </select>
-                </div>
-                <div>
-                    <div style="display: inline;">便</div>
-                    <select name="flight" id ="flight">
+                </label>
+            </div>
+            <div id="a3">
+                <label class="selectbox-2" >
+                    <select name="flight" id="flight">
+                        <option value="" disabled selected style="display:none;">便
                         <option></option>
                         <option>〇</option>
                     </select>
-                </div>
+                </label>
             </div>
         </div>
-        <button>作成</button>
+        <br>
+        <p id="er">{{er}}</p>
+        <button class="btn-square-shadow">作成</button>
     </form>
+    <br>
+    <div style="text-align: center;">
+        <a href="/">トップへ戻る</a>
+    </div>
 {% endblock %}

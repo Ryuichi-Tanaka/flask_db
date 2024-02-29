@@ -15,21 +15,37 @@ def create_article():
 
 @app.route('/register', methods=('GET', 'POST'))
 def register_article():
-    if request.method == 'GET':
-        return redirect(url_for('index'))
-    user = request.form['user']
-    breastfeeding = request.form['breastfeeding']
-    urine = request.form['urine']
-    flight = request.form['flight']
+
+    if 'user' not in request.form:
+        er ="人物名が設定されていません"
+        return render_template('create.html',er=er)
+    else:
+        user = request.form['user']
+
+    if 'breastfeeding' not in request.form:
+        breastfeeding = ""
+    else:
+        breastfeeding = request.form['breastfeeding']
+
+    if 'urine' not in request.form:
+        urine = ""
+    else:
+        urine = request.form['urine']
+
+    if 'flight' not in request.form:
+        flight = ""
+    else:
+        flight = request.form['flight']
+
     now = datetime.datetime.now()
-    now =f'{now:%H:%M}'
+    now = f'{now:%H:%M}'
     db = database.get_db()
     db.execute(
-        "INSERT INTO POST (USER, URINE,FLIGHT,breastfeeding) VALUES ( ?,?, ?, ?)",
-        (user, urine,flight,breastfeeding)
+        "INSERT INTO POST (USER, URINE,FLIGHT,breastfeeding,now) VALUES ( ?,?, ?, ?,?)",
+        (user, urine, flight, breastfeeding, now)
     )
     db.commit()
-    return redirect(url_for('index'),now=now)
+    return redirect(url_for('index'))
 
 @app.route('/list')
 def read_articles():

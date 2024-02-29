@@ -12,7 +12,7 @@ def close_db(exception=None):
 
     if db is not None:
         db.close()
-    
+
 def init_db():
     con = sqlite3.connect('memo.db')
     con.execute("DROP TABLE IF EXISTS POST")
@@ -22,6 +22,7 @@ def init_db():
         URINE TEXT, \
         breastfeeding TEXT, \
         FLIGHT TEXT, \
+        now TEXT, \
         DATE TEXT DEFAULT (DATE('now')))")
     print('データベースを初期化しました')
 

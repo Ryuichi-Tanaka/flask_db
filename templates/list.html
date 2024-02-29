@@ -1,39 +1,47 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    <title>記録</title>
+    <title >記録</title>
 {% endblock %}
 
 {% block content %}
-    <h1>記録</h1>
+    <h1 style="text-align: center;">記録</h1>
+    <div style="text-align: center;">
+        <a href="/">トップへ戻る</a>
+    </div>
+    <br>
     <table>
         <thead>
             <tr>
-                <th>ID</th>
+                <!-- <th>ID</th> -->
                 <th>日付</th>
                 <th>時間</th>
                 <th>人物</th>
                 <th>授乳</th>
                 <th>尿</th>
                 <th>便</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             {% for article in articles %}
                 <tr>
-                    <th>{{ article['ID'] }}</th>
-                    <th>{{ article['DATE'] }}</th>
-                    <th>{{ now }}</th>
-                    <th>{{ article['USER'] }}</th>
-                    <th>{{ article['breastfeeding'] }}</th>
-                    <th>{{ article['URINE'] }}</th>
-                    <th>{{ article['FLIGHT'] }}</th>
-                    <th>
+                    <!-- <td>{{ article['ID'] }}</td> -->
+                    <td>{{ article['DATE'] }}</td>
+                    <td>{{ article['now'] }}</td>
+                    <td>{{ article['USER'] }}</td>
+                    <td>{{ article['breastfeeding'] }}</td>
+                    <td>{{ article['URINE'] }}</td>
+                    <td>{{ article['FLIGHT'] }}</td>
+                    <td>
                         <a href="{{ url_for('delete_article', id=article['ID']) }}">削除</a>
-                    </th>
+                    </td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
-    <a href="/">トップへ戻る</a>
+    <br>
+    <div style="text-align: center;">
+        <a href="/">トップへ戻る</a>
+    </div>
 {% endblock %}
