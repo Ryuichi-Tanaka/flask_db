@@ -155,5 +155,5 @@ table tr:last-child td:last-child {
 }
 
 body{
-    background-image: url("img/sakura.jpg");
+    background-image: url("../img/sakura.jpg");
 }
