@@ -1,6 +1,7 @@
 import database
 from flask import Flask, redirect, render_template, request, url_for
 import datetime
+import csv
 
 app = Flask(__name__)
 app.teardown_appcontext(database.close_db)
@@ -60,5 +61,16 @@ def delete_article(id):
     db.commit()
     return redirect(url_for('read_articles'))
 
+@app.route('/result')
+def create_csv():
+    db = database.get_db()
+    rows = db.execute("SELECT * FROM POST").fetchall()
+    with open("src/result.csv", 'w', newline='') as f:
+            writer = csv.writer(f)
+            f.truncate(0)
+            writer.writerow(["日付","時間","人物","授乳","尿","便" ])
+            for row in rows:
+                writer.writerow([row['DATE'],row['now'],row['USER'], row['breastfeeding'], row['urine'], row['flight']])
+            return render_template('result.html')
 if __name__ == '__main__':
     app.run(debug=True)
