@@ -14,6 +14,10 @@ def index():
 def create_article():
     return render_template('create.html')
 
+@app.route('/create2')
+def create2():
+    return render_template('create2.html')
+
 @app.route('/register', methods=('GET', 'POST'))
 def register_article():
 
