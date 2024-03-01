@@ -1,8 +1,8 @@
 import database
-from flask import Flask, redirect, render_template, request, url_for
+from flask import Flask, redirect, render_template, request, url_for,send_from_directory
 import datetime
 import csv
-import os
+from flask import send_file
 
 app = Flask(__name__)
 app.teardown_appcontext(database.close_db)
@@ -14,6 +14,20 @@ def index():
 @app.route('/create')
 def create_article():
     return render_template('create.html')
+
+
+@app.route('/download')
+def download():
+    return send_file("src/result.csv",
+mimetype="text/csv",
+as_attachment=True,)
+
+@app.route('/download1')
+def download1():
+    return send_file("src/result2.csv",
+mimetype="text/csv",
+as_attachment=True,)
+
 
 @app.route('/create2')
 def create2():
@@ -100,9 +114,9 @@ def read_tenprerature():
 @app.route('/delete/<int:id>')
 def delete_article(id):
     db = database.get_db()
-    db.execute("DELETE FROM TENPRERATURE WHERE ID=?", (id, ))
+    db.execute("DELETE FROM POST WHERE ID=?", (id, ))
     db.commit()
-    return redirect(url_for('read_tenprerature'))
+    return redirect(url_for('read_articles'))
 
 @app.route('/delete/<int:id>')
 def delete_total(id):
@@ -136,3 +150,5 @@ def create_csv2():
             return render_template('result2.html')
 if __name__ == '__main__':
     app.run(debug=True)
+
+
