@@ -2,6 +2,7 @@ import database
 from flask import Flask, redirect, render_template, request, url_for
 import datetime
 import csv
+import os
 
 app = Flask(__name__)
 app.teardown_appcontext(database.close_db)
@@ -99,9 +100,9 @@ def read_tenprerature():
 @app.route('/delete/<int:id>')
 def delete_article(id):
     db = database.get_db()
-    db.execute("DELETE FROM POST WHERE ID=?", (id, ))
+    db.execute("DELETE FROM TENPRERATURE WHERE ID=?", (id, ))
     db.commit()
-    return redirect(url_for('read_articles'))
+    return redirect(url_for('read_tenprerature'))
 
 @app.route('/delete/<int:id>')
 def delete_total(id):
@@ -121,5 +122,17 @@ def create_csv():
             for row in rows:
                 writer.writerow([row['DATE'],row['now'],row['USER'], row['breastfeeding'], row['urine'], row['flight']])
             return render_template('result.html')
+    
+@app.route('/result2')
+def create_csv2():
+    db = database.get_db()
+    rows = db.execute("SELECT * FROM TENPRERATURE").fetchall()
+    with open("src/result2.csv", 'w', newline='') as f:
+            writer = csv.writer(f)
+            f.truncate(0)
+            writer.writerow(["日付","時間","体温：左","体温：右"])
+            for row in rows:
+                writer.writerow([row['DATE'],row['now'],row['LEFT'], row['LIGHT']])
+            return render_template('result2.html')
 if __name__ == '__main__':
     app.run(debug=True)
