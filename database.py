@@ -15,7 +15,9 @@ def close_db(exception=None):
 
 def init_db():
     con = sqlite3.connect('memo.db')
+    con1 = sqlite3.connect('memo.db')
     con.execute("DROP TABLE IF EXISTS POST")
+    con1.execute("DROP TABLE IF EXISTS TENPRERATURE")
     con.execute("CREATE TABLE POST (\
         ID INTEGER PRIMARY KEY AUTOINCREMENT, \
         USER TEXT, \
@@ -23,6 +25,13 @@ def init_db():
         breastfeeding TEXT, \
         FLIGHT TEXT, \
         now TEXT, \
+        DATE TEXT DEFAULT (DATE('now')))")
+    
+    con1.execute("CREATE TABLE TENPRERATURE(\
+        ID INTEGER PRIMARY KEY AUTOINCREMENT, \
+        LIGHT double, \
+        LEFT double,\
+        now TEXT,\
         DATE TEXT DEFAULT (DATE('now')))")
     print('データベースを初期化しました')
 

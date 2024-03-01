@@ -54,24 +54,61 @@ def register_article():
     articles = db.execute("SELECT * FROM POST")
     return render_template('list.html',articles=articles)
 
+
+
+@app.route('/register1', methods=('GET', 'POST'))
+def totals():
+
+    if 'light' not in request.form:
+        er ="体温：右が設定されていません"
+        return render_template('create2.html',er=er)
+    else:
+        light = request.form['light']
+
+    if 'left' not in request.form:
+        er ="体温：左が設定されていません"
+        return render_template('create2.html',er=er)
+    else:
+        left = request.form['left']
+    now = datetime.datetime.now()
+    now = f'{now:%H:%M}'
+    db = database.get_db()
+    db.execute(
+        "INSERT INTO TENPRERATURE (now,LIGHT,LEFT) VALUES ( ?,?, ?)",
+        (now,light,left)
+    )
+    db.commit()
+    db = database.get_db()
+    totals = db.execute("SELECT * FROM TENPRERATURE")
+    return render_template('list2.html',totals=totals)
+
+
+
 @app.route('/list')
 def read_articles():
     db = database.get_db()
     articles = db.execute("SELECT * FROM POST")
     return render_template('list.html', articles=articles)
 
-""" @app.route('/list2')
-def read_articles():
+@app.route('/list2')
+def read_tenprerature():
     db = database.get_db()
-    articles = db.execute("SELECT * FROM POST")
-    return render_template('list.html', articles=articles)
- """
+    totals = db.execute("SELECT * FROM TENPRERATURE")
+    return render_template('list2.html', totals=totals)
+
 @app.route('/delete/<int:id>')
 def delete_article(id):
     db = database.get_db()
     db.execute("DELETE FROM POST WHERE ID=?", (id, ))
     db.commit()
     return redirect(url_for('read_articles'))
+
+@app.route('/delete/<int:id>')
+def delete_total(id):
+    db = database.get_db()
+    db.execute("DELETE FROM TENPRERATURE WHERE ID=?", (id, ))
+    db.commit()
+    return redirect(url_for('read_tenprerature'))
 
 @app.route('/result')
 def create_csv():
