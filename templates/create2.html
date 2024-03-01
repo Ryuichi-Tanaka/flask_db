@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>新規作成</title>
+{% endblock %}
+
+{% block content %}
+    <h1 class="heading-10">記録する</h1>
+    <form action="{{ url_for('totals') }}" method="post" style="text-align: center;">
+        <div id="b0">
+            <label class="selectbox-2">
+                <select name="left" id="left">
+                    <option value="" disabled selected style="display:none;">体温：左
+                    <option>36.0</option>
+                    <option>36.1</option>
+                    <option>36.2</option>
+                    <option>36.3</option>
+                    <option>36.4</option>
+                    <option>36.5</option>
+                    <option>36.6</option>
+                    <option>36.7</option>
+                    <option>36.8</option>
+                    <option>36.9</option>
+                    <option>37.0</option>
+                    <option>37.1</option>
+                    <option>37.2</option>
+                    <option>37.3</option>
+                    <option>37.4</option>
+                    <option>37.5</option>
+                    <option>37.6</option>
+                    <option>37.7</option>
+                    <option>37.8</option>
+                    <option>37.9</option>
+                    <option>38.0</option>
+                    <option>38.1</option>
+                    <option>38.2</option>
+                    <option>38.3</option>
+                    <option>38.4</option>
+                    <option>38.5</option>
+                    <option>38.6</option>
+                    <option>38.7</option>
+                    <option>38.8</option>
+                    <option>38.9</option>
+                    <option>39.0</option>
+                    <option>39.1</option>
+                    <option>39.2</option>
+                    <option>39.3</option>
+                    <option>39.4</option>
+                    <option>39.5</option>
+                    <option>39.6</option>
+                    <option>39.7</option>
+                    <option>39.8</option>
+                    <option>39.9</option>
+                    <option>40.0</option>
+                </select>
+            </label>
+        </div>
+        <br>
+        <div id="b1">
+            <label class="selectbox-2">
+                <select name="light" id="light">
+                    <option value="" disabled selected style="display:none;">体温：右
+                    <option>36.0</option>
+                    <option>36.1</option>
+                    <option>36.2</option>
+                    <option>36.3</option>
+                    <option>36.4</option>
+                    <option>36.5</option>
+                    <option>36.6</option>
+                    <option>36.7</option>
+                    <option>36.8</option>
+                    <option>36.9</option>
+                    <option>37.0</option>
+                    <option>37.1</option>
+                    <option>37.2</option>
+                    <option>37.3</option>
+                    <option>37.4</option>
+                    <option>37.5</option>
+                    <option>37.6</option>
+                    <option>37.7</option>
+                    <option>37.8</option>
+                    <option>37.9</option>
+                    <option>38.0</option>
+                    <option>38.1</option>
+                    <option>38.2</option>
+                    <option>38.3</option>
+                    <option>38.4</option>
+                    <option>38.5</option>
+                    <option>38.6</option>
+                    <option>38.7</option>
+                    <option>38.8</option>
+                    <option>38.9</option>
+                    <option>39.0</option>
+                    <option>39.1</option>
+                    <option>39.2</option>
+                    <option>39.3</option>
+                    <option>39.4</option>
+                    <option>39.5</option>
+                    <option>39.6</option>
+                    <option>39.7</option>
+                    <option>39.8</option>
+                    <option>39.9</option>
+                    <option>40.0</option>
+                </select>
+            </label>
+        </div>
+        <p id="er">{{er}}</p>
+        <button class="btn-square-shadow">作成</button>
+    </form>
+    <br>
+    <div style="text-align: center;">
+        <a href="/" class="button-29">トップへ戻る</a>
+    </div>
+{% endblock %}

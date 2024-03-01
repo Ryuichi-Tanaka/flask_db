@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>記録</title>
+{% endblock %}
+
+{% block content %}
+    <h1 style="text-align: center;">記録</h1>
+    <div style="text-align: center;">
+        <a href="/" class="button-29">トップページへ戻る</a>
+    </div>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <!-- <th>ID</th> -->
+                <th>日付</th>
+                <th>時間</th>
+                <th>体温：左</th>
+                <th>体温：右</th>
+                <th><a href="/result2">csv出力</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for total in totals %}
+                <tr>
+                    <td>{{ total['DATE'] }}</td>
+                    <td>{{ total['now'] }}</td>
+                    <td>{{ total['LEFT'] }}</td>
+                    <td>{{ total['LIGHT'] }}</td>
+                    <td>
+                        <a href="{{ url_for('delete_total', id=total['ID']) }}">削除</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+
+    <div >
+        <button type="button" class="button-29" id="btn">トップへ</button>
+      </div>
+  
+
+      <script>
+        const btn_30 = document.getElementById("btn");
+
+btn_30.addEventListener("click", () => {
+  window.scroll({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+      </script>
+{% endblock %}
