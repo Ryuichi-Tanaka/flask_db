@@ -58,8 +58,14 @@ def register_article():
 def read_articles():
     db = database.get_db()
     articles = db.execute("SELECT * FROM POST")
-    return render_template('list.html', articles=articles,)
+    return render_template('list.html', articles=articles)
 
+""" @app.route('/list2')
+def read_articles():
+    db = database.get_db()
+    articles = db.execute("SELECT * FROM POST")
+    return render_template('list.html', articles=articles)
+ """
 @app.route('/delete/<int:id>')
 def delete_article(id):
     db = database.get_db()
