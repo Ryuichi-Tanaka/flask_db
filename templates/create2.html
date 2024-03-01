@@ -6,10 +6,10 @@
 
 {% block content %}
     <h1 class="heading-10">記録する</h1>
-    <form action="{{ url_for('register_article') }}" method="post" style="text-align: center;">
+    <form action="{{ url_for('totals') }}" method="post" style="text-align: center;">
         <div id="b0">
             <label class="selectbox-2">
-                <select name="user" id="user">
+                <select name="left" id="left">
                     <option value="" disabled selected style="display:none;">体温：左
                     <option>36.0</option>
                     <option>36.1</option>
@@ -58,7 +58,7 @@
         <br>
         <div id="b1">
             <label class="selectbox-2">
-                <select name="user" id="user">
+                <select name="light" id="light">
                     <option value="" disabled selected style="display:none;">体温：右
                     <option>36.0</option>
                     <option>36.1</option>

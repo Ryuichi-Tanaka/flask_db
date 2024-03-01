@@ -16,25 +16,20 @@
                 <!-- <th>ID</th> -->
                 <th>日付</th>
                 <th>時間</th>
-                <th>人物</th>
-                <th>授乳</th>
-                <th>尿</th>
-                <th>便</th>
+                <th>体温：左</th>
+                <th>体温：右</th>
                 <th><a href="/result">csv出力</a></th>
             </tr>
         </thead>
         <tbody>
-            {% for article in articles %}
+            {% for total in totals %}
                 <tr>
-                    <!-- <td>{{ article['ID'] }}</td> -->
-                    <td>{{ article['DATE'] }}</td>
-                    <td>{{ article['now'] }}</td>
-                    <td>{{ article['USER'] }}</td>
-                    <td>{{ article['breastfeeding'] }}</td>
-                    <td>{{ article['URINE'] }}</td>
-                    <td>{{ article['FLIGHT'] }}</td>
+                    <td>{{ total['DATE'] }}</td>
+                    <td>{{ total['now'] }}</td>
+                    <td>{{ total['LEFT'] }}</td>
+                    <td>{{ total['LIGHT'] }}</td>
                     <td>
-                        <a href="{{ url_for('delete_article', id=article['ID']) }}">削除</a>
+                        <a href="{{ url_for('delete_total', id=total['ID']) }}">削除</a>
                     </td>
                 </tr>
             {% endfor %}
