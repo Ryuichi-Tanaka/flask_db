@@ -1,5 +1,5 @@
 import database
-from flask import Flask, redirect, render_template, request, url_for,send_from_directory
+from flask import Flask, redirect, render_template, request, url_for
 import datetime
 import csv
 from flask import send_file

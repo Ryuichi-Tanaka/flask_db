@@ -7,7 +7,7 @@
 {% block content %}
     <h1 style="text-align: center;">記録</h1>
     <div style="text-align: center;">
-        <a href="/" class="button-29">トップへ戻る</a>
+        <a href="/" class="button-29">トップページへ戻る</a>
     </div>
     <br>
     <table>
@@ -41,7 +41,19 @@
         </tbody>
     </table>
     <br>
-    <div style="text-align: center;">
-        <a href="/" class="button-29">トップへ戻る</a>
-    </div>
+    <div >
+        <button type="button" class="button-29" id="btn">トップへ</button>
+      </div>
+  
+
+      <script>
+        const btn_30 = document.getElementById("btn");
+
+btn_30.addEventListener("click", () => {
+  window.scroll({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+      </script>
 {% endblock %}
