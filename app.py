@@ -46,7 +46,9 @@ def register_article():
         (user, urine, flight, breastfeeding, now)
     )
     db.commit()
-    return redirect(url_for('index'))
+    db = database.get_db()
+    articles = db.execute("SELECT * FROM POST")
+    return render_template('list.html',articles=articles)
 
 @app.route('/list')
 def read_articles():
