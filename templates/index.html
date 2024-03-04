@@ -5,20 +5,12 @@
 {% endblock %}
 
 {% block content %}
-<div style="text-align: center;">
-    <h1>トップページ</h1>
-</div>
-    <div style="text-align: center;">
-        <p>成長の記録を行います</p>
-        <a href="{{ url_for('create_article' )}}" class="button-29">記録する</a>
-        <br>
-        <p>成長の記録を表示します</p>
-        <a href="/list" class="button-29">記録を表示</a>
-        <br>
-        <p>体温の記録を行います</p>
+    <div class="field">
+        <a href="{{ url_for('create_article' )}}" class="btn_25">記録<br>する</a>
+        <a href="/list" class="btn_26">記録を表示</a>
+<!--         <br>
         <a href="/create2" class="button-29">体温の記録</a>
         <br>
-        <p>体温の記録を表示します</p>
-        <a href="/list2" class="button-29">体温の記録を表示</a>
+        <a href="/list2" class="button-29">体温の記録を表示</a> -->
     </div>
 {% endblock %}

@@ -71,7 +71,7 @@ def register_article():
 
 
 
-@app.route('/register1', methods=('GET', 'POST'))
+""" @app.route('/register1', methods=('GET', 'POST'))
 def totals():
 
     if 'light' not in request.form:
@@ -95,7 +95,7 @@ def totals():
     db.commit()
     db = database.get_db()
     totals = db.execute("SELECT * FROM TENPRERATURE")
-    return render_template('list2.html',totals=totals)
+    return render_template('list2.html',totals=totals) """
 
 
 
@@ -105,11 +105,11 @@ def read_articles():
     articles = db.execute("SELECT * FROM POST")
     return render_template('list.html', articles=articles)
 
-@app.route('/list2')
+""" @app.route('/list2')
 def read_tenprerature():
     db = database.get_db()
     totals = db.execute("SELECT * FROM TENPRERATURE")
-    return render_template('list2.html', totals=totals)
+    return render_template('list2.html', totals=totals) """
 
 @app.route('/delete/<int:id>')
 def delete_article(id):
@@ -137,7 +137,7 @@ def create_csv():
                 writer.writerow([row['DATE'],row['now'],row['USER'], row['breastfeeding'], row['urine'], row['flight']])
             return render_template('result.html')
     
-@app.route('/result2')
+""" @app.route('/result2')
 def create_csv2():
     db = database.get_db()
     rows = db.execute("SELECT * FROM TENPRERATURE").fetchall()
@@ -147,7 +147,7 @@ def create_csv2():
             writer.writerow(["日付","時間","体温：左","体温：右"])
             for row in rows:
                 writer.writerow([row['DATE'],row['now'],row['LEFT'], row['LIGHT']])
-            return render_template('result2.html')
+            return render_template('result2.html') """
 if __name__ == '__main__':
     app.run(debug=True)
 
