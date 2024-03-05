@@ -5,22 +5,23 @@
 {% endblock %}
 
 {% block content %}
-    <h1 style="text-align: center;">記録</h1>
     <div style="text-align: center;">
-        <a href="/" class="button-29">トップページへ戻る</a>
+        <a href="/" class="button-29">とっぷぺーじへもどる</a>
     </div>
     <br>
     <table>
         <thead>
             <tr>
                 <!-- <th>ID</th> -->
-                <th>日付</th>
-                <th>時間</th>
-                <th>人物</th>
-                <th>授乳</th>
-                <th>尿</th>
-                <th>便</th>
-                <th><a href="/result">csv出力</a></th>
+                <th>ひづけ</th>
+                <th>じかん</th>
+                <th>きろくしたひと</th>
+                <th>みるく</th>
+                <th>おしっこ</th>
+                <th>うんち</th>
+                <th>びこう</th>
+                <th></th>
+                <th><a href="/result">CSVにかく</a></th>
             </tr>
         </thead>
         <tbody>
@@ -33,6 +34,7 @@
                     <td>{{ article['breastfeeding'] }}</td>
                     <td>{{ article['URINE'] }}</td>
                     <td>{{ article['FLIGHT'] }}</td>
+                    <td>{{ article['bikou'] }}</td>
                     <td>
                         <a href="{{ url_for('delete_article', id=article['ID']) }}">削除</a>
                     </td>
@@ -42,7 +44,7 @@
     </table>
     <br>
     <div >
-        <button type="button" class="button-29" id="btn">トップへ</button>
+        <button type="button" class="button-29" id="btn">とっぷへ</button>
       </div>
   
 

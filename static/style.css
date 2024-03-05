@@ -2,10 +2,10 @@
     display: inline-block;
     padding: 1em 4em;
     text-decoration: none;
-    background: #e36464;/*ボタン色*/
-    border-left-color: #e36464;
+    background: #CCAACC;/*ボタン色*/
+    border-left-color: #CCAACC;
     border-right-color: #f79393;
-    border-top-color: #e36464;
+    border-top-color: #CCAACC;
     color: #FFF;
     border-bottom: solid 4px #ad6262;
     border-radius: 7pc;
@@ -38,7 +38,7 @@
     width: 2.8em;
     height: 2.8em;
     border-radius: 0 25px 25px 0;
-    background-color: #e36464;
+    background-color: #CCAACC;
     content: '';
 }
 
@@ -61,7 +61,7 @@
     min-width: 230px;
     height: 2.8em;
     padding: .4em 3.6em .4em .8em;
-    border: 2px solid #e36464;
+    border: 2px solid #CCAACC;
     border-radius: 25px;
     color: #333333;
     font-size: 1em;
@@ -71,22 +71,6 @@
 .selectbox-2 select:focus {
     outline: 1px solid #b7d3e6;
 }
-
-
-.heading-10 {
-    display: inline-block;
-    position: relative;
-    transform: rotate(-5deg);
-    padding: .5em .7em;
-    border-left: 2px dotted rgba(0, 0, 0, .1);
-    border-right: 2px dotted rgba(0, 0, 0, .1);
-    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
-    background-color: rgba(0, 0, 0, .01);
-    color: #333333;
-    display: flex;
-    justify-content: center;
-}
-
 
 
 table{
@@ -107,10 +91,10 @@ table th:last-child{
 table th{
     text-align: center;
     color:white;
-    background: linear-gradient(#f96464,#f27b7b);
-    border-left: 1px solid #f27b7b;
-    border-top: 1px solid #f27b7b;
-    border-bottom: 1px solid #f27b7b;
+    background: linear-gradient(#99ddffb0,#99DDFF);
+    border-left: 1px solid #99DDFF;
+    border-top: 1px solid #99DDFF;
+    border-bottom: 1px solid #99DDFF;
     box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
     width: 8%;
     padding: 10px 0;
@@ -120,8 +104,8 @@ table th{
 
 table td{
     text-align: center;
-    border-left: 1px solid #f27b7b;
-    border-bottom: 1px solid #f27b7b;
+    border-left: 1px solid #99DDFF;
+    border-bottom: 1px solid #99DDFF;
     border-top:none;
     box-shadow: 20px -17px 20px 20px #eee inset;
     width: 8%;
@@ -160,9 +144,10 @@ table tr:last-child td:last-child {
 }
 
 body{
-    background-image: url(sakura.jpg);
+    background-color: #FFDDEE;
+/*     background-image: url(sakura.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 
@@ -175,10 +160,10 @@ body{
     margin:0 auto;
     padding: .9em 2em;
     overflow: hidden;
-    border: 1px solid #e36464;
+    border: 1px solid #CCAACC;
     border-radius: 25px;
     background-color: #fff;
-    color: #e36464;
+    color: #CCAACC;
     font-size: 1em;
 }
 
@@ -194,7 +179,7 @@ body{
     z-index: -1;
     width: 0;
     height: 100%;
-    background-color: #e36464;
+    background-color: #CCAACC;
     content: '';
     transition: width .3s ease;
 }
@@ -208,8 +193,8 @@ body{
     width: 5px;
     height: 5px;
     margin-left: 10px;
-    border-top: 2px solid #e36464;
-    border-right: 2px solid #e36464;
+    border-top: 2px solid #CCAACC;
+    border-right: 2px solid #CCAACC;
     content: '';
 }
 
@@ -227,7 +212,7 @@ body{
     padding: .9em 2em;
     border: none;
     border-radius: 5px;
-    background-color: #e36464;
+    background-color: #CCAACC;
     color: #fff;
     font-weight: 600;
     font-size: 1em;
@@ -262,5 +247,120 @@ body{
     content: '';
 }
 
+
+
+a.btn_25 {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 200px;
+	margin: auto;
+    font-size: 60px;
+    font-weight: bold;
+	padding: 5rem 10rem;
+    margin-top: 250px;
+	border-radius: 100vw;
+	color: #b37b7b;
+	background: #CCAACC;
+}
+a.btn_25:hover {
+	background-position: right center;
+	background-size: 200% auto;
+	-webkit-animation: pulse 2s infinite;
+	animation: shad26 1.5s infinite;
+	color: #fff;
+}
+@keyframes shad26 {
+	0% {box-shadow: 0 0 0 0 #CCAACC;}
+	70% {box-shadow: 0 0 0 10px rgb(39 172 217 / 0%);}
+	100% {box-shadow: 0 0 0 0 rgb(39 172 217 / 0%);}
+}
+
+
+a.btn_26 {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+    font-size: 60px;
+    font-weight: bold;
+	width: 200px;
+	margin: auto;
+	padding: 5rem 10rem;
+    margin-top: 250px;
+	border-radius: 100vw;
+	color: #b37b7b;
+	background: #99DDFF;
+}
+a.btn_26:hover {
+	background-position: right center;
+	background-size: 200% auto;
+	-webkit-animation: pulse 2s infinite;
+	animation: shad26 1.5s infinite;
+	color: #fff;
+}
+@keyframes shad26 {
+	0% {box-shadow: 0 0 0 0 #99DDFF;}
+	70% {box-shadow: 0 0 0 10px rgb(39 172 217 / 0%);}
+	100% {box-shadow: 0 0 0 0 rgb(39 172 217 / 0%);}
+}
+
+.field{
+    display: flex;
+}
+
+.container {
+    display: flex; /* 要素を横に配置 */
+    justify-content: center;
+  }
+  
+  .item {
+    text-align: center; /* アイコンとラジオボタンを中央に配置 */
+    margin-right: 20px; /* アイテム間の間隔を調整 */
+  }
+  
+  .item img {
+    display: block; /* ブロック要素として表示 */
+    margin: 0 auto; /* 水平方向に中央に配置 */
+  }
+  
+  .item input {
+    margin-top: 5px; /* ラジオボタンとアイコンの間隔を調整 */
+    width: 20px;
+    height: 20px;
+  }
+.container1 {
+    display: flex; /* 要素を横に配置 */
+    justify-content: center;
+    
+  }
+  
+  .item {
+    text-align: center; /* アイコンとラジオボタンを中央に配置 */
+    margin-right: 20px; /* アイテム間の間隔を調整 */
+  }
+  
+  .item img {
+    display: block; /* ブロック要素として表示 */
+    margin: 0 auto; /* 水平方向に中央に配置 */
+  }
+  
+  .item input {
+    margin-top: 5px; /* ラジオボタンとアイコンの間隔を調整 */
+    width: 20px;
+    height: 20px;
+  }
+
+  .container2{
+    display: flex;
+    justify-content: center;
+}
+
+
+.container3 input{
+    width: 30px;
+    height: 30px;
+}
 
 

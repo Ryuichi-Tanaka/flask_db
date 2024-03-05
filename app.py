@@ -37,7 +37,7 @@ def create2():
 def register_article():
 
     if 'user' not in request.form:
-        er ="人物名が設定されていません"
+        er ="人物が設定されていません"
         return render_template('create.html',er=er)
     else:
         user = request.form['user']
@@ -57,12 +57,17 @@ def register_article():
     else:
         flight = request.form['flight']
 
+    if 'bikou' not in request.form:
+        bikou = ""
+    else:
+        bikou = request.form['bikou']
+
     now = datetime.datetime.now()
     now = f'{now:%H:%M}'
     db = database.get_db()
     db.execute(
-        "INSERT INTO POST (USER, URINE,FLIGHT,breastfeeding,now) VALUES ( ?,?, ?, ?,?)",
-        (user, urine, flight, breastfeeding, now)
+        "INSERT INTO POST (USER, URINE,FLIGHT,breastfeeding,now,bikou) VALUES ( ?,?, ?, ?,?,?)",
+        (user, urine, flight, breastfeeding, now,bikou)
     )
     db.commit()
     db = database.get_db()
@@ -71,7 +76,7 @@ def register_article():
 
 
 
-@app.route('/register1', methods=('GET', 'POST'))
+""" @app.route('/register1', methods=('GET', 'POST'))
 def totals():
 
     if 'light' not in request.form:
@@ -95,7 +100,7 @@ def totals():
     db.commit()
     db = database.get_db()
     totals = db.execute("SELECT * FROM TENPRERATURE")
-    return render_template('list2.html',totals=totals)
+    return render_template('list2.html',totals=totals) """
 
 
 
@@ -105,11 +110,11 @@ def read_articles():
     articles = db.execute("SELECT * FROM POST")
     return render_template('list.html', articles=articles)
 
-@app.route('/list2')
+""" @app.route('/list2')
 def read_tenprerature():
     db = database.get_db()
     totals = db.execute("SELECT * FROM TENPRERATURE")
-    return render_template('list2.html', totals=totals)
+    return render_template('list2.html', totals=totals) """
 
 @app.route('/delete/<int:id>')
 def delete_article(id):
@@ -132,12 +137,12 @@ def create_csv():
     with open("src/result.csv", 'w', newline='') as f:
             writer = csv.writer(f)
             f.truncate(0)
-            writer.writerow(["日付","時間","人物","授乳","尿","便" ])
+            writer.writerow(["ひづけ","じかん","きろくしたひと","みるく","おしっこ","うんち" ])
             for row in rows:
                 writer.writerow([row['DATE'],row['now'],row['USER'], row['breastfeeding'], row['urine'], row['flight']])
             return render_template('result.html')
     
-@app.route('/result2')
+""" @app.route('/result2')
 def create_csv2():
     db = database.get_db()
     rows = db.execute("SELECT * FROM TENPRERATURE").fetchall()
@@ -147,7 +152,13 @@ def create_csv2():
             writer.writerow(["日付","時間","体温：左","体温：右"])
             for row in rows:
                 writer.writerow([row['DATE'],row['now'],row['LEFT'], row['LIGHT']])
-            return render_template('result2.html')
+            return render_template('result2.html') """
+
+@app.route('/edit',methods=('GET','POST'))
+def edit():
+
+    return render_template('edit.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
 
