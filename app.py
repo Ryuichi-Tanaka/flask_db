@@ -137,7 +137,7 @@ def create_csv():
     with open("src/result.csv", 'w', newline='') as f:
             writer = csv.writer(f)
             f.truncate(0)
-            writer.writerow(["日付","時間","人物","授乳","尿","便" ])
+            writer.writerow(["ひづけ","じかん","きろくしたひと","みるく","おしっこ","うんち" ])
             for row in rows:
                 writer.writerow([row['DATE'],row['now'],row['USER'], row['breastfeeding'], row['urine'], row['flight']])
             return render_template('result.html')
