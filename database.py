@@ -24,6 +24,7 @@ def init_db():
         URINE TEXT, \
         breastfeeding TEXT, \
         FLIGHT TEXT, \
+        bikou TEXT, \
         now TEXT, \
         DATE TEXT DEFAULT (DATE('now')))")
     

@@ -57,12 +57,17 @@ def register_article():
     else:
         flight = request.form['flight']
 
+    if 'bikou' not in request.form:
+        bikou = ""
+    else:
+        bikou = request.form['bikou']
+
     now = datetime.datetime.now()
     now = f'{now:%H:%M}'
     db = database.get_db()
     db.execute(
-        "INSERT INTO POST (USER, URINE,FLIGHT,breastfeeding,now) VALUES ( ?,?, ?, ?,?)",
-        (user, urine, flight, breastfeeding, now)
+        "INSERT INTO POST (USER, URINE,FLIGHT,breastfeeding,now,bikou) VALUES ( ?,?, ?, ?,?,?)",
+        (user, urine, flight, breastfeeding, now,bikou)
     )
     db.commit()
     db = database.get_db()
@@ -148,6 +153,12 @@ def create_csv2():
             for row in rows:
                 writer.writerow([row['DATE'],row['now'],row['LEFT'], row['LIGHT']])
             return render_template('result2.html') """
+
+@app.route('/edit',methods=('GET','POST'))
+def edit():
+
+    return render_template('edit.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
 

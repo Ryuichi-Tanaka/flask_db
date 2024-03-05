@@ -257,10 +257,11 @@ a.btn_25 {
 	width: 200px;
 	margin: auto;
     font-size: 60px;
+    font-weight: bold;
 	padding: 5rem 10rem;
     margin-top: 250px;
 	border-radius: 100vw;
-	color: #fff;
+	color: #b37b7b;
 	background: #CCAACC;
 }
 a.btn_25:hover {
@@ -289,7 +290,7 @@ a.btn_26 {
 	padding: 5rem 10rem;
     margin-top: 250px;
 	border-radius: 100vw;
-	color: #fff;
+	color: #b37b7b;
 	background: #99DDFF;
 }
 a.btn_26:hover {
@@ -308,3 +309,46 @@ a.btn_26:hover {
 .field{
     display: flex;
 }
+
+.container {
+    display: flex; /* 要素を横に配置 */
+    justify-content: center;
+  }
+  
+  .item {
+    text-align: center; /* アイコンとラジオボタンを中央に配置 */
+    margin-right: 20px; /* アイテム間の間隔を調整 */
+  }
+  
+  .item img {
+    display: block; /* ブロック要素として表示 */
+    margin: 0 auto; /* 水平方向に中央に配置 */
+  }
+  
+  .item input {
+    margin-top: 5px; /* ラジオボタンとアイコンの間隔を調整 */
+    width: 20px;
+    height: 20px;
+  }
+.container1 {
+    display: flex; /* 要素を横に配置 */
+    justify-content: center;
+    
+  }
+  
+  .item {
+    text-align: center; /* アイコンとラジオボタンを中央に配置 */
+    margin-right: 20px; /* アイテム間の間隔を調整 */
+  }
+  
+  .item img {
+    display: block; /* ブロック要素として表示 */
+    margin: 0 auto; /* 水平方向に中央に配置 */
+  }
+  
+  .item input {
+    margin-top: 5px; /* ラジオボタンとアイコンの間隔を調整 */
+    width: 20px;
+    height: 20px;
+  }
+  
