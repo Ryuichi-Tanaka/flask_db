@@ -37,7 +37,7 @@ def create2():
 def register_article():
 
     if 'user' not in request.form:
-        er ="人物名が設定されていません"
+        er ="人物が設定されていません"
         return render_template('create.html',er=er)
     else:
         user = request.form['user']
