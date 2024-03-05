@@ -10,7 +10,7 @@
         <div class="container" >
             <div class="item" >
                 <img src="../static/chichi.png" alt="表示" width="80px" height="80px">
-                <input type="radio" name="user" id="user" value="父">
+                <input type="radio" name="user" id="father" value="父">
             </div>
         
             <div class="item">
@@ -20,12 +20,12 @@
         
             <div class="item">
                 <img src="../static/ane.png" alt="表示不可" width="80px" height="80px">
-                <input type="radio" name="user" id="Siblings"value="姉">
+                <input type="radio" name="user" id="sister"value="姉">
             </div>
         
             <div class="item">
                 <img src="../static/imouto.png" alt="表示不可" width="80px" height="80px">
-                <input type="radio" name="user" id="Grandfather"value="妹">
+                <input type="radio" name="user" id="younger sister"value="妹">
             </div>
         </div>
         
@@ -33,17 +33,17 @@
             <div class="container1">
                 <div class="item">
                     <img src="../static/otouto.png" alt="表示不可" width="80px" height="80px">
-                    <input type="radio" name="user" id="Grandmother"value="弟">
+                    <input type="radio" name="user" id="younger brother "value="弟">
                 </div>
             
                 <div class="item">
                     <img src="../static/sobo.png" alt="表示不可" width="80px" height="80px">
-                    <input type="radio" name="user" id="Children"value="祖母">
+                    <input type="radio" name="user" id="grandmother"value="祖母">
                 </div>
             
                 <div class="item">
                     <img src="../static/sohu.png" alt="表示不可" width="80px" height="80px">
-                    <input type="radio" name="user" id="brother"value="祖父">
+                    <input type="radio" name="user" id="grandfather"value="祖父">
                 </div>
             
                 <div class="item">
@@ -53,9 +53,10 @@
             </div>
     
         </div>
-
+        <br>
         <div>
-            <div id="a1">
+            <div id="a1" class="container2">
+                <img src="../static/milk.png" alt="表示不可" width="60px" height="60px">
                 <label class="selectbox-2">
                     <select name="breastfeeding" id="breastfeeding">
                         <option value="" disabled selected style="display:none;">ミルク
@@ -83,16 +84,14 @@
                     </label>
                 </div>
                 
-                <div id="a2">
-                    <label class="selectbox-2">
-                        <select name="urine" id="urine">
-                            <option value="" disabled selected style="display:none;">尿
-                            <option>〇</option>
-                        </select>
-                    </label>
+                <div id="a2" class="container3">
+                    <img src="../static/omutu.png" alt="表示不可" width="60" height="60">
+                    <input type="checkbox" name="urine" id="urine"value="おしっこ">おしっこ
                 </div>
     
-                <div id="a3">
+                <div id="a3" class="container2">
+                    <img src="../static/toire.png" alt="表示不可" width="60" height="60">
+    
                     <label class="selectbox-2">
                         <select name="flight" id="flight">
                             <option value="" disabled selected style="display:none;">便

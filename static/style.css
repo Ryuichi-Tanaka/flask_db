@@ -351,4 +351,12 @@ a.btn_26:hover {
     width: 20px;
     height: 20px;
   }
-  
+
+  .container2{
+    display: flex;
+    justify-content: center;
+}
+.container3 input{
+    width: 20px;
+    height: 20px;
+}
