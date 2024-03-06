@@ -124,6 +124,13 @@ def delete_article(id):
     return redirect(url_for('read_articles'))
 
 @app.route('/delete/<int:id>')
+def delete_find(id):
+    db = database.get_db()
+    db.execute("DELETE FROM POST WHERE ID=?", (id, ))
+    db.commit()
+    return redirect(url_for('find'))
+
+@app.route('/delete/<int:id>')
 def delete_total(id):
     db = database.get_db()
     db.execute("DELETE FROM TENPRERATURE WHERE ID=?", (id, ))
