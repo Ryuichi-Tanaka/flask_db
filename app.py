@@ -159,7 +159,7 @@ def create_csv2():
 def find():
     text_input = request.args.get('search')
     db = database.get_db()
-    finds = db.execute("SELECT * FROM POST WHERE user LIKE ? OR date LIKE ? OR now LIKE ? OR breastfeeding LIKE ? OR urine LIKE ? OR flight LIKE ? OR bikou LIKE ?", ('%' + text_input + '%', '%' + text_input + '%', '%' + text_input + '%','%' + text_input + '%', '%' + text_input + '%', '%' + text_input + '%','%' + text_input + '%'))
+    finds = db.execute("SELECT * FROM POST WHERE user LIKE ? OR date LIKE ? OR now LIKE ? OR breastfeeding LIKE ? OR urine LIKE ? OR flight LIKE ? OR bikou LIKE ? order by date desc", ('%' + text_input + '%', '%' + text_input + '%', '%' + text_input + '%','%' + text_input + '%', '%' + text_input + '%', '%' + text_input + '%','%' + text_input + '%'))
     return render_template('list.html',finds=finds)
 
 if __name__ == '__main__':
