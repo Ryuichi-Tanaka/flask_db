@@ -107,7 +107,7 @@ def totals():
 @app.route('/list')
 def read_articles():
     db = database.get_db()
-    articles = db.execute("SELECT * FROM POST")
+    articles = db.execute("SELECT * FROM POST order by date desc")
     return render_template('list.html', articles=articles)
 
 """ @app.route('/list2')
@@ -154,10 +154,13 @@ def create_csv2():
                 writer.writerow([row['DATE'],row['now'],row['LEFT'], row['LIGHT']])
             return render_template('result2.html') """
 
-@app.route('/edit',methods=('GET','POST'))
-def edit():
 
-    return render_template('edit.html')
+@app.route('/find')
+def find():
+    text_input = request.args.get('search')
+    db = database.get_db()
+    finds = db.execute("SELECT * FROM POST WHERE user LIKE ? OR date LIKE ? OR now LIKE ? OR breastfeeding LIKE ? OR urine LIKE ? OR flight LIKE ? OR bikou LIKE ?", ('%' + text_input + '%', '%' + text_input + '%', '%' + text_input + '%','%' + text_input + '%', '%' + text_input + '%', '%' + text_input + '%','%' + text_input + '%'))
+    return render_template('list.html',finds=finds)
 
 if __name__ == '__main__':
     app.run(debug=True)

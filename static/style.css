@@ -368,3 +368,27 @@ a.btn_26:hover {
 }
 
 
+.textbox-1-label,
+.textbox-1 {
+    color: #333;
+}
+
+.textbox-1-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: .9em;
+}
+
+.textbox-1 {
+    width: 25%;
+    padding: 8px 10px;
+    border: 1px solid #969da3;
+    border-radius: 3px;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.textbox-1::placeholder {
+    color: #999;
+}
+
