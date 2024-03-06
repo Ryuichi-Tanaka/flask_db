@@ -9,6 +9,14 @@
         <a href="/" class="button-29">とっぷぺーじへもどる</a>
     </div>
     <br>
+
+    <div class="search" style="text-align: center;" >
+        <form action="{{ url_for('find' )}}" method="'post">
+            <input type="text" name="search">
+            <input type="submit" value="けんさく">
+        </form>
+    </div>
+    <br>
     <table>
         <thead>
             <tr>
@@ -42,11 +50,28 @@
             {% endfor %}
         </tbody>
     </table>
+    <table>
+    <tbody>
+        {% for find in finds %}
+            <tr>
+                <td>{{ find['DATE'] }}</td>
+                <td>{{ find['now'] }}</td>
+                <td>{{ find['USER'] }}</td>
+                <td>{{ find['breastfeeding'] }}</td>
+                <td>{{ find['URINE'] }}</td>
+                <td>{{ find['FLIGHT'] }}</td>
+                <td>{{ find['bikou'] }}</td>
+                <td></td>
+                <td></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
     <br>
     <div >
         <button type="button" class="button-29" id="btn">とっぷへ</button>
       </div>
-  
+
 
       <script>
         const btn_30 = document.getElementById("btn");

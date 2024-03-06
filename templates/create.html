@@ -83,18 +83,21 @@
             </div>
             <br>
             <div id="a3" class="container2">
-                <div class="item">
-                    <img src="../static/cha.png" alt="表示不可" width="80px" height="80px">
-                    <input type="radio" name="flight" id="cha" value="茶色">ちゃいろ
+                <div>
+                    <div class="item">
+                        <img src="../static/cha.png" alt="表示不可" width="80px" height="80px">
+                        <input type="radio" name="flight" id="cha" value="茶色">ちゃいろ
+                    </div>
+                    <div class="item">
+                        <img src="../static/pink.png" alt="表示不可" width="80px" height="80px">
+                        <input type="radio" name="flight" id="pink" value="ピンク色">ぴんくいろ
+                    </div>
+                    <div class="item">
+                        <img src="../static/ao.png" alt="表示不可" width="80px" height="80px">
+                        <input type="radio" name="flight" id="cha" value="青色">あおいろ
+                    </div>
                 </div>
-                <div class="item">
-                    <img src="../static/pink.png" alt="表示不可" width="80px" height="80px">
-                    <input type="radio" name="flight" id="pink" value="ピンク色">ぴんくいろ
-                </div>
-                <div class="item">
-                    <img src="../static/ao.png" alt="表示不可" width="80px" height="80px">
-                    <input type="radio" name="flight" id="cha" value="青色">あおいろ
-                </div>
+                <div>
                     <div class="item">
                         <img src="../static/yellow.png" alt="表示不可" width="80px" height="80px">
                         <input type="radio" name="flight" id="yellow" value="黄色">きいろ
@@ -107,10 +110,14 @@
                         <img src="../static/green.png" alt="表示不可" width="80px" height="80px">
                         <input type="radio" name="flight" id="green" value="緑色">みどりいろ
                     </div>
+
+                </div>
             </div>
         </div>
         <br>
-        <textarea name="bikou" id="bikou" cols="30" rows="10" placeholder=""></textarea>
+        <label>
+            <input type="text" class="textbox-1"name="bikou" placeholder="びこう" />
+        </label>
         <p id="er">{{er}}</p>
         <button class="btn-square-shadow">さくせい</button>
     </form>
