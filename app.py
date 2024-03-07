@@ -11,6 +11,19 @@ app.teardown_appcontext(database.close_db)
 def index():
     return render_template('index.html')
 
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/login_form',methods=('GET','POST'))
+def login_form():
+    if 'user' not in request.form:
+        return render_template('login.html')
+    else:
+        db = database.get_db()
+        db.execute("select user from users user=?",('user',))
+        return render_template('list.html')
+
 @app.route('/create')
 def create_article():
     return render_template('create.html')

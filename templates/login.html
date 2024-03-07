@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block title%}
+<title>ログイン</title>
+{% endblock%}
+{% block content %}
+<h1 style="text-align: center;">ログイン</h1>
+<form action="{{url_for('login_form')}}" style="text-align: center;">
+    <div>
+        <div>
+            <input type="text" name="user" placeholder="ユーザー名">
+        </div>
+        <br>
+        <div>
+            <input type="password" name="password" placeholder="パスワード">
+        </div>
+        <br>
+        <input type="submit" value="ログイン">
+    </div>
+</form>
+{% endblock%}
