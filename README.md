@@ -1,8 +1,6 @@
 # Name
 flask_db
 
-video
-
 https://github.com/Ryuichi-Tanaka/flask_db/assets/87804267/f6876c18-496f-43ba-b5ba-a548f6219518
 
 ## Overview
@@ -55,11 +53,4 @@ UXにこだわりを持ち、入力工程が少なくなるようできるだけ
 
 ・データベースの変更（現在はsqlite3を使って実装していますが、今後は学習も兼ねてFireBaseなどのクラウドサービスを使っての運用も考えています）
 
-・Pythonanywereでのエラー対応（Pythonanywereを使ってWeb公開を行っていますが、データベースとの接続部分でエラーがでており、調査と検証を行っています）
-
-## PR
-
-| Issue  | Solution |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+・Pythonanywereでのエラー対応（Pythonanywereを使ってWeb公開を行っていますが、データベースとの接続部分でエラーがでており、現在調査と検証を行っています）
