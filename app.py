@@ -21,7 +21,7 @@ def login_form():
         return render_template('login.html')
     else:
         db = database.get_db()
-        db.execute("select user from users user=?",('user',))
+        db.execute("select user from users user=?",('user', ))
         return render_template('list.html')
 
 @app.route('/create')
