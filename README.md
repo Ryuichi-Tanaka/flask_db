@@ -1,8 +1,6 @@
 # Name
 flask_db
 
-video
-
 https://github.com/Ryuichi-Tanaka/flask_db/assets/87804267/f6876c18-496f-43ba-b5ba-a548f6219518
 
 ## Overview
