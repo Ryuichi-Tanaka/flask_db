@@ -56,10 +56,3 @@ UXにこだわりを持ち、入力工程が少なくなるようできるだけ
 ・データベースの変更（現在はsqlite3を使って実装していますが、今後は学習も兼ねてFireBaseなどのクラウドサービスを使っての運用も考えています）
 
 ・Pythonanywereでのエラー対応（Pythonanywereを使ってWeb公開を行っていますが、データベースとの接続部分でエラーがでており、調査と検証を行っています）
-
-## PR
-
-| Issue  | Solution |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
