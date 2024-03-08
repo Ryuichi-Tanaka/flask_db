@@ -11,6 +11,7 @@ https://github.com/Ryuichi-Tanaka/flask_db/assets/87804267/f6876c18-496f-43ba-b5
 Flask 3.0.2
 
 sqlite3
+
 ## Usage
 「きろくをする」ボタンを押下後、人物やミルクの量などを設定し記録簿へ書込みを行う
 
