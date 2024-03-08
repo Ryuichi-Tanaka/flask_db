@@ -6,7 +6,7 @@ video
 https://github.com/Ryuichi-Tanaka/flask_db/assets/87804267/f6876c18-496f-43ba-b5ba-a548f6219518
 
 ## Overview
-赤ちゃんの育児記録簿
+赤ちゃん育児記録簿
 ## Requirement
 Flask 3.0.2
 
