@@ -54,4 +54,4 @@ UXにこだわりを持ち、入力工程が少なくなるようできるだけ
 ・データベースの変更（現在はSqlite3を使って実装していますが、今後は学習も兼ねてFireBaseなどのクラウドサービスを使っての運用も考えています）
 
 ・Pythonanywereでのエラー対応（PythonAnywereを使用してWeb公開を行っていますが、データベースとの接続部分でエラーがでており、現在調査と検証を行っています）
-公開URL⇒https://ryu.pythonanywhere.com/
+公開URL ⇒ https://ryu.pythonanywhere.com/
