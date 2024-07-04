@@ -144,12 +144,8 @@ table tr:last-child td:last-child {
 }
 
 body{
-    background-color: #FFDDEE;
-/*     background-image: url(sakura.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; */
+    background-image: url(pastel.png);
 }
-
 
 .button-29 {
     display: flex;
@@ -247,30 +243,33 @@ body{
     content: '';
 }
 
-
+a.head2{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    padding: 5rem 10rem;
+    background: url(memory.png) no-repeat center center;
+    background-size: 10%;
+}
+a.head3{
+    display: block;
+    padding: 5rem 10rem;
+    background: url(memory.png) no-repeat;
+    background-size: 10%;
+}
 
 a.btn_25 {
-	display: block;
-	text-align: center;
-	vertical-align: middle;
-	text-decoration: none;
-	width: 200px;
-	margin: auto;
-    font-size: 60px;
-    font-weight: bold;
-	padding: 5rem 10rem;
-    margin-top: 250px;
-	border-radius: 100vw;
-	color: #b37b7b;
-	background: #CCAACC;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    padding: 5rem 10rem;
+    margin-top: 10px;
+    background: url('write.png') no-repeat center center;
+    background-size: 50%;
 }
-a.btn_25:hover {
-	background-position: right center;
-	background-size: 200% auto;
-	-webkit-animation: pulse 2s infinite;
-	animation: shad26 1.5s infinite;
-	color: #fff;
-}
+
 @keyframes shad26 {
 	0% {box-shadow: 0 0 0 0 #CCAACC;}
 	70% {box-shadow: 0 0 0 10px rgb(39 172 217 / 0%);}
@@ -279,27 +278,17 @@ a.btn_25:hover {
 
 
 a.btn_26 {
-	display: block;
-	text-align: center;
-	vertical-align: middle;
-	text-decoration: none;
-    font-size: 60px;
-    font-weight: bold;
-	width: 200px;
-	margin: auto;
-	padding: 5rem 10rem;
-    margin-top: 250px;
-	border-radius: 100vw;
-	color: #b37b7b;
-	background: #99DDFF;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+/* s */
+    margin: auto;
+    padding: 5rem 10rem;
+    margin-top: 10px;
+    background: url('hyouji.png') no-repeat center center;
+    background-size: 80%;
 }
-a.btn_26:hover {
-	background-position: right center;
-	background-size: 200% auto;
-	-webkit-animation: pulse 2s infinite;
-	animation: shad26 1.5s infinite;
-	color: #fff;
-}
+
 @keyframes shad26 {
 	0% {box-shadow: 0 0 0 0 #99DDFF;}
 	70% {box-shadow: 0 0 0 10px rgb(39 172 217 / 0%);}

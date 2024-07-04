@@ -27,7 +27,6 @@ def login_form():
 @app.route('/create')
 def create_article():
     return render_template('create.html')
-@
 
 @app.route('/download')
 def download():

@@ -5,6 +5,11 @@
 {% endblock %}
 
 {% block content %}
+<div>
+    <div>
+        <a href="{{url_for('index')}}" class="head3"></a>
+    </div>
+</div>
     <form action="{{ url_for('register_article') }}" method="post" style="text-align: center;">
         <div class="container">
             <div class="item">
@@ -122,7 +127,4 @@
         <button class="btn-square-shadow">さくせい</button>
     </form>
     <br>
-    <div style="text-align: center;">
-        <a href="/" class="button-29">とっぷへもどる</a>
-    </div>
 {% endblock %}

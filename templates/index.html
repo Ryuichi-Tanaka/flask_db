@@ -5,13 +5,12 @@
 {% endblock %}
 
 {% block content %}
+<div class="head1">
+    <a href="{{url_for('index')}}" class="head2"></a>
+</div>
     <div class="field">
-        <a href="{{ url_for('create_article' )}}" class="btn_25">きろくする</a>
-        <a href="/list" class="btn_26">きろくを表示</a>
-<!--         <br>
-        <a href="/create2" class="button-29">体温の記録</a>
-        <br>
-        <a href="/list2" class="button-29">体温の記録を表示</a> -->
+        <a href="{{ url_for('create_article' )}}" class="btn_25"></a>
+        <a href="/list" class="btn_26"></a>
     </div>
 {% endblock %}
 
