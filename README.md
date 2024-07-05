@@ -1,7 +1,8 @@
 # Name
 flask_db
 
-https://github.com/Ryuichi-Tanaka/flask_db/assets/87804267/f6876c18-496f-43ba-b5ba-a548f6219518
+https://github.com/Ryuichi-Tanaka/flask_db/assets/87804267/96d6b555-ce3b-478d-abab-b6b713ccda2f
+
 
 ## Overview
 赤ちゃん育児記録簿
