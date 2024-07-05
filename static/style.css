@@ -286,7 +286,7 @@ a.btn_26 {
     padding: 5rem 10rem;
     margin-top: 10px;
     background: url('hyouji.png') no-repeat center center;
-    background-size: 80%;
+    background-size: 50%;
 }
 
 @keyframes shad26 {
