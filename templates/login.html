@@ -7,7 +7,7 @@
 <div class="top-image">
     <img src="../static/top-image.png" alt="" class="small">
 </div>
-<form action="{{url_for('login_form')}}" style="text-align: center;">
+<form action="{{url_for('login_form')}}" method="POST" style="text-align: center;">
     <div>
         <div>
             <label>
@@ -16,7 +16,7 @@
         </div>
         <br>
         <div>
-            <input type="password" class="textbox-2" placeholder="パスワード"/>
+            <input type="password" name="password" class="textbox-2" placeholder="パスワード"/>
         </label>
         </div>
         <br>
