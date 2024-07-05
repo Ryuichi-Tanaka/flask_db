@@ -9,11 +9,11 @@ app.teardown_appcontext(database.close_db)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
-
-@app.route('/login')
-def login():
     return render_template('login.html')
+
+@app.route('/index')
+def login():
+    return render_template('index.html')
 
 @app.route('/login_form',methods=('GET','POST'))
 def login_form():
@@ -21,7 +21,7 @@ def login_form():
         return render_template('login.html')
     else:
         db = database.get_db()
-        db.execute("select user from users user=?",('user', ))
+        db.execute("SELECT USER from USERNAME where user=?",('user', ))
         return render_template('list.html')
 
 @app.route('/create')

@@ -4,18 +4,23 @@
 <title>ログイン</title>
 {% endblock%}
 {% block content %}
-<h1 style="text-align: center;">ログイン</h1>
+<div class="top-image">
+    <img src="../static/top-image.png" alt="" class="small">
+</div>
 <form action="{{url_for('login_form')}}" style="text-align: center;">
     <div>
         <div>
-            <input type="text" name="user" placeholder="ユーザー名">
+            <label>
+                <input type="text" name="user" class="textbox-2" placeholder="ユーザー名"/>
+            </label>
         </div>
         <br>
         <div>
-            <input type="password" name="password" placeholder="パスワード">
+            <input type="password" class="textbox-2" placeholder="パスワード"/>
+        </label>
         </div>
         <br>
-        <input type="submit" value="ログイン">
+        <input type="submit" value="いどう" class="btn btn--orange btn--circle btn--circle-a btn--shadow">
     </div>
 </form>
 {% endblock%}
