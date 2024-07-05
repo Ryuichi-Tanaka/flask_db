@@ -29,7 +29,7 @@ def login_form():
         result2 = cursor2.fetchone()
         
         if result and result2:  # 結果が存在する場合
-            return render_template('index.html',username=result['USER'])
+            return render_template('index.html')
         else:
             return render_template('login.html')
 

@@ -1,26 +1,41 @@
-{% extends 'base.html'%}
+{% extends 'base.html' %}
 
-{% block title%}
-<title>ログイン</title>
-{% endblock%}
+{% block title %}
+    <title>ログイン</title>
+{% endblock %}
+
 {% block content %}
 <div class="top-image">
     <img src="../static/top-image.png" alt="" class="small">
 </div>
-<form action="{{url_for('login_form')}}" method="POST" style="text-align: center;">
+
+<form action="{{ url_for('login_form') }}" method="POST" style="text-align: center;">
     <div>
         <div>
             <label>
-                <input type="text" name="user" class="textbox-2" placeholder="ユーザー名"/>
+                <input type="text" name="user" class="textbox-2" placeholder="ユーザー名">
             </label>
         </div>
         <br>
         <div>
-            <input type="password" name="password" class="textbox-2" placeholder="パスワード"/>
-        </label>
+            <input type="password" name="password" class="textbox-2" placeholder="パスワード">
         </div>
         <br>
         <input type="submit" value="いどう" class="btn btn--orange btn--circle btn--circle-a btn--shadow">
     </div>
 </form>
-{% endblock%}
+
+<div class="line-it-button"
+     data-lang="ja"
+     data-type="share-b"
+     data-env="REAL"
+     data-url="https://ryu.pythonanywhere.com/"
+     data-color="default"
+     data-size="large"
+     data-count="false"
+     data-ver="3"
+     style="display: none;">
+</div>
+
+<script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async defer></script>
+{% endblock %}

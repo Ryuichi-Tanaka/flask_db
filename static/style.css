@@ -421,6 +421,16 @@ a.btn_26 {
     border: 2px solid rgb(126,217,87);
   }
 
-  .Uname{
-    color: #999;
+  .line-it-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin: 0 auto;
+    padding: .9em 2em;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1em;
   }
