@@ -7,6 +7,9 @@
 {% block content %}
 <div class="head1">
     <a href="{{url_for('index')}}" class="head2"></a>
+    <h3 class="Uname">
+        こんにちは{{username}}さん
+    </h3>
 </div>
     <div class="field">
         <a href="{{ url_for('create_article' )}}" class="btn_25"></a>
