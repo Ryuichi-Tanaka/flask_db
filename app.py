@@ -21,8 +21,17 @@ def login_form():
         return render_template('login.html')
     else:
         db = database.get_db()
-        db.execute("SELECT USER from USERNAME where user=?",('user', ))
-        return render_template('list.html')
+        user_input = request.form['user']  # フォームからユーザー入力を取得
+        user_pw = request.form['password']  # フォームからユーザー入力を取得
+        cursor = db.execute("SELECT USER FROM USERNAME WHERE user=?", (user_input,))
+        cursor2 = db.execute("SELECT PW FROM USERNAME WHERE PW=?", (user_pw,))
+        result = cursor.fetchone()
+        result2 = cursor2.fetchone()
+        
+        if result and result2:  # 結果が存在する場合
+            return render_template('list.html')
+        else:
+            return render_template('login.html')
 
 @app.route('/create')
 def create_article():
