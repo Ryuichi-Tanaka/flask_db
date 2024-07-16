@@ -1,7 +1,8 @@
 # Name
 flask_db
 
-https://github.com/Ryuichi-Tanaka/flask_db/assets/87804267/f6876c18-496f-43ba-b5ba-a548f6219518
+https://github.com/Ryuichi-Tanaka/flask_db/assets/87804267/96d6b555-ce3b-478d-abab-b6b713ccda2f
+
 
 ## Overview
 赤ちゃん育児記録簿
@@ -39,14 +40,14 @@ UXにこだわりを持ち、入力工程が少なくなるようできるだけ
 
 ## Future Issues
 
-・Login、Logoutの実装（セキュリティの観点からGoogle、LINEでの実装を検討しています）
-
+~~・Login、Logoutの実装（セキュリティの観点からGoogle、LINEでの実装を検討しています）~~
+※ひとまずGoogleなどの認証機能は使わずに実装
 ・画面のレスポンシブ対応
 
 ・デザイン性の質の向上（ターゲット層を考え、現在はパステルカラーでのデザインで統一しています）
 
-・共有機能（LINE等にデータを送信できるように考えています）
-
+~~・共有機能（LINE等にデータを送信できるように考えています）~~
+※Lineへの共有機能実装完了
 ・検索フォームの刷新（文字を打ち込んで検索をかけるのではなく、検索対象をボタンワンタップでサーチできるよう考えています）
 
 ・ファイルダウンロード時、ExcelやPDFへもダウンロードを可能にする
@@ -55,4 +56,5 @@ UXにこだわりを持ち、入力工程が少なくなるようできるだけ
 
 ~~・Pythonanywereでのエラー対応（PythonAnywereを使用してWeb公開を行っていますが、データベースとの接続部分でエラーがでており、現在調査と検証を行っています）~~
 　※現在は修正完了し、希望通りの動作を確認しています。
+ 
 公開URL ⇒ https://ryu.pythonanywhere.com/
