@@ -13,7 +13,7 @@
     <div class="search" style="text-align: center;">
         <form action="{{ url_for('find' )}}" method="'post">
             <input type="text" name="search">
-            <input type="submit" value="けんさく">
+            <input type="submit" value="検索">
         </form>
     </div>
     <br>
@@ -21,15 +21,15 @@
         <thead>
             <tr>
                 <!-- <th>ID</th> -->
-                <th>ひづけ</th>
-                <th>じかん</th>
-                <th>きろくしたひと</th>
-                <th>みるく</th>
+                <th>日付</th>
+                <th>時間</th>
+                <th>記録者</th>
+                <th>ミルク</th>
                 <th>おしっこ</th>
                 <th>うんち</th>
-                <th>びこう</th>
+                <th>備考</th>
                 <th></th>
-                <th><a href="/result">CSVにかく</a></th>
+                <th><a href="/result">CSV出力</a></th>
             </tr>
         </thead>
         <tbody>
